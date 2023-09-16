@@ -1,0 +1,12 @@
+autotrain llm --train \
+--project_name "myllm" \
+--model NousResearch/Llama-2-7b-chat-hf \
+--data_path . \
+--text_column text \
+--use-peft \
+--use-int4 \
+--learning_rate 2e-4 \
+--train_batch_size 12 \
+--num_train_epochs 1 \
+--trainer sft \
+--push_to_hub --repo_id PPD-PPX/llama2finetunedTest-v1

@@ -3,8 +3,7 @@
 In this repository, we fine-tune a pre-trained Large Language Model (LLM) using a tailored dataset and deploying it on a local machine to provide dating advice tailored to 16 personalities.
 
 ## Data Preparation
--  [Public Datasets](https://github.com/yaodongC/awesome-instruction-dataset#the-instruction-following-datasets)
-This Reporsitory
+-  Accessible [Public Datasets](https://github.com/yaodongC/awesome-instruction-dataset#the-instruction-following-datasets)
 -  Homemade Customized Dataset (related to dating advice)
 
 Prepare you dataset into a file named train.csv with a "text" column in the following format:
@@ -42,7 +41,7 @@ autotrain
 ```
 
 ### Training
-Here we plan to fine-tune a Llama2-7B Model using the pre-trained parameters from [NousResearch/Llama-2-7b-chat-hf](https://huggingface.co/NousResearch/Llama-2-7b-chat-hf). To fit the model into limited memory, we set up the 4 bits quantization.
+Here we plan to fine-tune a Llama2-7B Model using the pre-trained parameters from [NousResearch/Llama-2-7b-chat-hf](https://huggingface.co/NousResearch/Llama-2-7b-chat-hf). We chose not use Meta's Llama2 version to avoid Meta's approval delay. To fit the model into limited memory, we set up the 4 bits quantization.
 ```sh
 autotrain llm --train \
 --project_name <Your Project Name> \

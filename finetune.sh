@@ -6,7 +6,7 @@ autotrain llm --train \
 --use-peft \
 --use-int4 \
 --learning_rate 2e-4 \
---train_batch_size 12 \
---num_train_epochs 1 \
+--train_batch_size 4 \
+--num_train_epochs 3 \
 --trainer sft \
---push_to_hub --repo_id PPD-PPX/llama2finetunedTest-v1
+--push_to_hub --repo_id PPD-PPX/llama2finetunedTest-v2

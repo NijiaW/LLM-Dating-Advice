@@ -63,9 +63,12 @@ def main():
     ending_labels = [":q", "exit", "exit()", "quit", "end"]
     print(Fore.RED + "Hello. What is the personality code of your date?")
     P_CODE = ""
+
+    exit_flag = False
     while True:
         statement = input(Fore.BLACK + "> ")
         if statement.strip().lower() in ending_labels:
+            exit_flag = True
             break
 
         if (not statement.strip().upper() in sixteenPersonalities):
@@ -76,9 +79,10 @@ def main():
             print(Fore.RED + "What type of guidance or advice are you looking for?")
             break
 
-    while True:
+    while exit_flag == False:
         statement = input(Fore.BLACK + "> ")
         if statement.strip().lower() in ending_labels:
+            exit_flag = True
             break
 
         print(Fore.RED + analysis(P_CODE, statement))
